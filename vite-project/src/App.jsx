@@ -1,21 +1,41 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import SectionOne from "./components/SectionOne";
-import SectionTwo from "./components/SectionTwo";
-import Footer from "./components/Footer";
+import React, { useState, useEffect } from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from './firebase/firebase';
+import SignInSignUp from './components/SignInSignUp';
+import Panels from './components/Panels';
 import './App.css';
 
-function App() {
-    return (
+const App = () => {
+  const [isSignUpMode, setIsSignUpMode] = useState(false);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  const toggleMode = () => {
+    setIsSignUpMode(!isSignUpMode);
+  };
+
+  return (
+    <div className={`container ${isSignUpMode ? 'sign-up-mode' : ''}`}>
+      {user ? (
+        <div>
+          <h1>Welcome, {user.email}!</h1>
+          <button onClick={() => auth.signOut()}>Sign Out</button>
+        </div>
+      ) : (
         <>
-            <Navbar />
-            <Header />
-            <SectionOne />
-            <SectionTwo />
-            <Footer />
+          <SignInSignUp isSignUpMode={isSignUpMode} />
+          <Panels toggleMode={toggleMode} />
         </>
-    );
-}
+      )}
+    </div>
+  );
+};
 
 export default App;
