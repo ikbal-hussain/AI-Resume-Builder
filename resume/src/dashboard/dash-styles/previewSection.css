@@ -1,13 +1,14 @@
+/* Base styles for screen */
 .preview-section {
   flex: 1;
-  max-width: 50%;
+  max-width: 50%; /* This is for the screen view */
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
-  max-height: 600px;
+  height: auto;
   font-family: 'Arial', sans-serif;
 }
 
@@ -73,4 +74,43 @@
   color: #444;
   font-size: 14px;
   margin: 5px 0;
+}
+
+/* Print styles */
+@media print {
+  body {
+    margin: 0; /* No margin on the body */
+    padding: 0; /* No padding */
+    overflow: hidden; /* Prevent scrollbars in print view */
+  }
+
+  .preview-section {
+    flex: none; /* Reset flex settings for printing */
+    max-width: none; /* Full width for print */
+    width: 100%; /* Use full width */
+    height: auto; /* Allow height to adjust naturally */
+    padding: 20px; /* Maintain padding for readability */
+    border: none; /* No border for print */
+    border-radius: 0; /* Remove border radius for print */
+    background: #ffffff; /* White background for print */
+    box-shadow: none; /* Remove shadow for print */
+    overflow: visible; /* Ensure content is fully visible */
+    margin: 0; /* Remove margins */
+  }
+
+  /* Ensure print content fits within the page */
+  @page {
+    size: auto; /* Use auto to fit the content */
+    margin: 10mm; /* Provide some margin around the content */
+  }
+
+  /* Hide elements not needed for print */
+  .print-button-container {
+    display: none; /* Hide the print button */
+  }
+
+  /* General adjustments for all elements */
+  .section {
+    page-break-inside: avoid; /* Prevent sections from breaking across pages */
+  }
 }

@@ -1,0 +1,31 @@
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .preview-section {
+    width: 100%;
+    max-width: 100%; /* Full width for print */
+    height: auto;
+    padding: 20px; /* Add padding for better presentation */
+    border: none;
+    border-radius: 0;
+    background: #ffffff;
+    box-shadow: none;
+    overflow: visible;
+    margin: 0 auto;
+  }
+
+  @page {
+    margin: 10mm; /* Margins for the printed page */
+  }
+
+  .print-button-container {
+    display: none;
+  }
+
+  .no-print {
+    display: none;
+  }
+}

@@ -17,7 +17,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(227, 7, 7, 0.1);
     overflow-y: auto; /* Enables vertical scrolling */
-    max-height: 600px; /* Adjust this value based on your layout */
+    max-height: 800px; /* Adjust this value based on your layout */
   }
   
   /* Preview section styling */
