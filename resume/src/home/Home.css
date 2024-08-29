@@ -1,0 +1,63 @@
+.home-container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .hero-section {
+    background: #f5f5f5;
+    padding: 50px 20px;
+  }
+  
+  .hero-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2em;
+    color: #666;
+  }
+  
+  .cta-button {
+    background-color: #f26222;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  
+  .features-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background: #fff;
+  }
+  
+  .feature {
+    max-width: 300px;
+  }
+  
+  .feature img {
+    width: 50px;
+  }
+  
+  .testimonials-section {
+    padding: 50px 20px;
+    background: #f5f5f5;
+  }
+  
+  .testimonial {
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    padding: 20px;
+    background: black;
+    color: white;
+  }
+  
