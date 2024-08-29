@@ -1,8 +1,9 @@
 /* Base styles for screen */
 .preview-section {
   flex: 1;
-  max-width: 50%; /* This is for the screen view */
-  padding: 20px;
+  width: 650px; /* Use full available width */
+  max-width: 100%; /* Ensure it doesn't exceed the container width */
+  padding: 20px; /* Add padding back for readability */
   border: 1px solid #ddd;
   border-radius: 8px;
   background: #ffffff;
@@ -16,10 +17,12 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .profile-image-container {
   margin-right: 20px;
+  flex-shrink: 0;
 }
 
 .profile-image-preview {
@@ -31,6 +34,7 @@
 }
 
 .profile-details {
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -50,6 +54,7 @@
   margin: 5px 0;
   display: flex;
   align-items: center;
+  word-wrap: break-word;
 }
 
 .contact-info i {
@@ -59,6 +64,7 @@
 
 .section {
   margin-bottom: 20px;
+  width: 100%; /* Ensure section takes full width */
 }
 
 .section h5 {
@@ -75,42 +81,71 @@
   font-size: 14px;
   margin: 5px 0;
 }
+.print-button-container{
+   display: flex;
+   justify-content: center;
+   margin: 10px;
+}
 
 /* Print styles */
 @media print {
   body {
-    margin: 0; /* No margin on the body */
-    padding: 0; /* No padding */
-    overflow: hidden; /* Prevent scrollbars in print view */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
   }
 
   .preview-section {
-    flex: none; /* Reset flex settings for printing */
-    max-width: none; /* Full width for print */
-    width: 100%; /* Use full width */
-    height: auto; /* Allow height to adjust naturally */
-    padding: 20px; /* Maintain padding for readability */
-    border: none; /* No border for print */
-    border-radius: 0; /* Remove border radius for print */
-    background: #ffffff; /* White background for print */
-    box-shadow: none; /* Remove shadow for print */
-    overflow: visible; /* Ensure content is fully visible */
-    margin: 0; /* Remove margins */
+    flex: none;
+    max-width: none;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border: none;
+    border-radius: 0;
+    background: #ffffff;
+    box-shadow: none;
+    overflow: visible;
+    margin: 0;
   }
 
-  /* Ensure print content fits within the page */
   @page {
-    size: auto; /* Use auto to fit the content */
-    margin: 10mm; /* Provide some margin around the content */
+    size: auto;
+    margin: 10mm;
   }
 
-  /* Hide elements not needed for print */
   .print-button-container {
-    display: none; /* Hide the print button */
+    display: none;
   }
 
-  /* General adjustments for all elements */
   .section {
-    page-break-inside: avoid; /* Prevent sections from breaking across pages */
+    page-break-inside: avoid;
+    margin-bottom: 15px;
+    width: 100%; /* Ensure sections take full width in print */
+  }
+
+  .profile-section {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; /* Ensure profile section takes full width */
+  }
+
+  .profile-image-container {
+    margin-bottom: 15px;
+  }
+
+  .contact-info p {
+    font-size: 12px;
+  }
+
+  .section h5 {
+    font-size: 18px;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+  }
+
+  .section p {
+    font-size: 12px;
   }
 }

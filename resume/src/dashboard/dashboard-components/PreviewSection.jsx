@@ -28,13 +28,13 @@ function PreviewSection({ formData }) {
               <div className="contact-info">
                 <p><i className="fa fa-phone"></i>{formData.phone}</p>
                 <p><i className="fa fa-envelope"></i>{formData.email}</p>
-                <p><i className="fa fa-map-marker"></i>{formData.location}</p>
-                <p><i className="fa fa-github"></i><a href={formData.github} target="_blank" rel="noopener noreferrer">{formData.github}</a></p>
-                <p><i className="fa fa-linkedin"></i><a href={formData.linkedin} target="_blank" rel="noopener noreferrer">{formData.linkedin}</a></p>
+                <p><i className="fa-solid fa-location-dot"></i>{formData.location}</p>
+                <p><i className="fa-brands fa-github"></i><a href={formData.github} target="_blank" rel="noopener noreferrer">{formData.github}</a></p>
+                <p><i className="fa-brands fa-linkedin"></i><a href={formData.linkedin} target="_blank" rel="noopener noreferrer">{formData.linkedin}</a></p>
               </div>
             </div>
           </div>
-
+          
           <div className="section">
             <h5>PROFESSIONAL SUMMARY</h5>
             <p>{formData.summary}</p>
