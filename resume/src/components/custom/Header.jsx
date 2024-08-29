@@ -18,7 +18,7 @@ function Header() {
         </div>
       ) : (
         <Link to={"/auth/sign-in"}>
-          <Button>Get Started</Button>
+          <Button>Get started</Button>
         </Link>
       )}
     </div>
