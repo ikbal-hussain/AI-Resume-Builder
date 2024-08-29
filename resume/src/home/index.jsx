@@ -1,11 +1,36 @@
 import Header from '@/components/custom/Header'
 import React from 'react'
-import './Home.css' 
 
-function Home() {
+import './Home.css' 
+import { Section_1 } from './section_1'
+import { Footer } from './footer'
+import { Section_2 } from './section_2'
+
+
+const Home=()=> {
   return (
-    <div className="home-container">
-      <Header />
+    // <div className="home-container">
+    <>
+     {/* ------------------------------section 1 part--------------------------------- */}
+     <Section_1/>
+     <Section_2/>
+
+      {/*--------------------------- footer section here ------------------------------------------------------------*/}
+      
+      <Footer/>
+</>
+
+    // </div>
+    
+  )
+}
+
+export default Home
+
+
+
+
+{/* <Header />
       <div className="hero-section">
         <h1 className="hero-title"><b>ResumeFlow</b></h1>
         <h3 className="hero-title">Build Your Perfect Resume</h3>
@@ -39,12 +64,4 @@ function Home() {
           <p>"A professional resume in minutes. Love it!"</p>
           <span><b>- Jamie L.</b></span>
         </div>
-      </div>
-      <footer>
-        <p>&copy; 2024 ResumeFlow. All rights reserved.</p>
-      </footer>
-    </div>
-  )
-}
-
-export default Home
+      </div> */}
