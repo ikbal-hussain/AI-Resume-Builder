@@ -1,0 +1,76 @@
+.preview-section {
+  flex: 1;
+  max-width: 50%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 600px;
+  font-family: 'Arial', sans-serif;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-image-container {
+  margin-right: 20px;
+}
+
+.profile-image-preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f26222;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  font-size: 14px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  margin-right: 8px;
+  color: #f26222;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section h5 {
+  color: #f26222;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid #f26222;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.section p {
+  color: #444;
+  font-size: 14px;
+  margin: 5px 0;
+}
