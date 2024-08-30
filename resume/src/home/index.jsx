@@ -5,18 +5,23 @@ import './Home.css'
 import { Section_1 } from './section_1'
 import { Footer } from './footer'
 import { Section_2 } from './section_2'
+import { Ratting } from './rating'
+import { Faq } from './faq'
+import { Rating_carosal } from './ratting'
 
 
 const Home=()=> {
   return (
-    // <div className="home-container">
+   
     <>
-     {/* ------------------------------section 1 part--------------------------------- */}
+      <Header/>
      <Section_1/>
      <Section_2/>
 
       {/*--------------------------- footer section here ------------------------------------------------------------*/}
-      
+      {/* <Ratting/> */}
+      {/* <Rating_carosal/> */}
+      <Faq/>
       <Footer/>
 </>
 

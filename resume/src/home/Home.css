@@ -6,7 +6,8 @@
 
 
 #section_1{
-  margin-top: 100px;
+  margin-top: 60px;
+  padding-top: 50px;
 
   background-color: #eff2f9;
   width: 100%;
@@ -56,6 +57,7 @@
 
 #section_2{
   width: 100%;
+  padding-top: 50px;
   /* border: 1px solid; */
 
 }
@@ -113,6 +115,101 @@
   
 }
 
+/* ------------------------------Ratting--------------------------------------- */
+
+/* #rating_container{
+  width: 100%;
+  padding: 100px;
+
+}
+#inner_rating{
+  width: 80%;
+  margin: auto;
+  border: 1px solid ;
+  display: flex;
+  position: relative;
+  
+}
+.Crousal_btn{
+  position: absolute;
+  top: 50%;
+}
+#crausal{
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  margin: auto;
+  overflow: scroll;
+  border: 1px solid red;
+
+
+}
+.ratingcard{
+  /* display: flex;
+  flex-direction: column; */
+  /* width: 500px;
+  border: 1px solid;
+  
+}
+.ratingcard>h2{
+  font-size: 24px;
+  font-weight: 600;
+}
+.rating{
+  display: flex;
+
+} */
+
+
+
+
+
+
+/* Carousel.css */
+
+/* .carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carousel-content {
+  display: flex;
+  overflow: hidden;
+  width: 60%;
+  justify-content: space-between;
+}
+
+.card {
+  min-width: 30%;
+  margin: 0 10px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+}
+
+.prev-button,
+.next-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: #0056b3;
+} */
+ 
 
 
 
