@@ -7,7 +7,7 @@ function FormSection({ formData, handleChange, handleFileChange, handleSubmit })
       <h3>Create a New Resume</h3>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Profile Image:</label>
+          <label>Profile Image</label>
           <input
             type="file"
             name="profileImage"
