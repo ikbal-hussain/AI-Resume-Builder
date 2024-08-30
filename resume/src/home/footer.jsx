@@ -9,7 +9,7 @@ export const Footer=()=>{
         <footer>
         
         <div id="footer_socialmedia">
-            <img src="./image/Nav-image/footerlogo.png" alt="" id="footer_logo"/>
+            <img src="/logo_white-removebg.png" alt="" id="footer_logo" className="h-16"/>
             <div id="socialmedia">
                 <img src={facebooklogo} alt=""/>
                 <img src={instagram_icon} alt=""/>

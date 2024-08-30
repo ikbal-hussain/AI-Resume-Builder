@@ -6,7 +6,8 @@
 
 
 #section_1{
-  margin-top: 100px;
+  margin-top: 60px;
+  padding-top: 50px;
 
   background-color: #eff2f9;
   width: 100%;
@@ -56,6 +57,7 @@
 
 #section_2{
   width: 100%;
+  padding-top: 50px;
   /* border: 1px solid; */
 
 }
@@ -113,6 +115,65 @@
   
 }
 
+/* ------------------------------Ratting--------------------------------------- */
+
+/* #rating_container{
+  width: 100%;
+  padding: 100px;
+
+}
+#inner_rating{
+  width: 80%;
+  margin: auto;
+  border: 1px solid ;
+  display: flex;
+  position: relative;
+  
+} */
+ .slider-container{
+  padding: 50px;
+ }
+.heading{
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#crausal{
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  margin: auto;
+  overflow: scroll;
+  border: 1px solid red;
+
+
+}
+.ratingcard{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  /* border: 1px solid; */
+  padding: 20px;
+  
+  
+}
+.ratingcard>h2{
+  font-size: 24px;
+  font-weight: 600;
+}
+.rating{
+  display: flex;
+
+} 
+
+
+
+
+
+
+
+ 
 
 
 
