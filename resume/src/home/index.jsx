@@ -19,8 +19,8 @@ const Home=()=> {
      <Section_2/>
 
       {/*--------------------------- footer section here ------------------------------------------------------------*/}
-      {/* <Ratting/> */}
-      {/* <Rating_carosal/> */}
+      
+      <Rating_carosal/>
       <Faq/>
       <Footer/>
 </>

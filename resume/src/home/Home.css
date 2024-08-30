@@ -129,11 +129,16 @@
   display: flex;
   position: relative;
   
+} */
+ .slider-container{
+  padding: 50px;
+ }
+.heading{
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
 }
-.Crousal_btn{
-  position: absolute;
-  top: 50%;
-}
+
 #crausal{
   display: flex;
   gap: 20px;
@@ -145,10 +150,12 @@
 
 }
 .ratingcard{
-  /* display: flex;
-  flex-direction: column; */
-  /* width: 500px;
-  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  /* border: 1px solid; */
+  padding: 20px;
+  
   
 }
 .ratingcard>h2{
@@ -158,57 +165,14 @@
 .rating{
   display: flex;
 
-} */
+} 
 
 
 
 
 
 
-/* Carousel.css */
 
-/* .carousel-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.carousel-content {
-  display: flex;
-  overflow: hidden;
-  width: 60%;
-  justify-content: space-between;
-}
-
-.card {
-  min-width: 30%;
-  margin: 0 10px;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border: 1px solid #ddd;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s ease;
-}
-
-.prev-button,
-.next-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin: 0 10px;
-}
-
-.prev-button:hover,
-.next-button:hover {
-  background-color: #0056b3;
-} */
  
 
 
