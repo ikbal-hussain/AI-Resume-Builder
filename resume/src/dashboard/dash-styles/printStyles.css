@@ -6,9 +6,9 @@
 
   .preview-section {
     width: 100%;
-    max-width: 100%; /* Full width for print */
+    max-width: 100%;
     height: auto;
-    padding: 20px; /* Add padding for better presentation */
+    padding: 20px;
     border: none;
     border-radius: 0;
     background: #ffffff;
@@ -18,7 +18,7 @@
   }
 
   @page {
-    margin: 10mm; /* Margins for the printed page */
+    margin: 10mm; 
   }
 
   .print-button-container {
