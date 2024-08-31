@@ -2,17 +2,13 @@ import React, { useRef } from 'react';
 import ReactToPrint from 'react-to-print';
 import "../dash-styles/CreateResume.css"; 
 import "../dash-styles/previewSection.css"; 
-import "../dash-styles/printStyles.css"; // Import print styles last
+import "../dash-styles/printStyles.css"; 
 
 function PreviewSection({ formData }) {
   const componentRef = useRef();
 
   return (
     <div>
-      {/* Button to trigger print */}
-      
-
-      {/* The actual content to be printed */}
       <div className="preview-section" ref={componentRef}>
         <div className="preview-content">
           <div className="profile-section">

@@ -1,16 +1,15 @@
-/* Base styles for screen */
 .preview-section {
   flex: 1;
-  width: 650px; /* Use full available width */
-  max-width: 100%; /* Ensure it doesn't exceed the container width */
-  padding: 20px; /* Add padding back for readability */
+  width: 650px;
+  max-width: 100%;
+  padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   height: auto;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .profile-section {
@@ -64,7 +63,7 @@
 
 .section {
   margin-bottom: 20px;
-  width: 100%; /* Ensure section takes full width */
+  width: 100%;
 }
 
 .section h5 {
@@ -81,10 +80,10 @@
   font-size: 14px;
   margin: 5px 0;
 }
-.print-button-container{
-   display: flex;
-   justify-content: center;
-   margin: 10px;
+.print-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
 }
 
 /* Print styles */
@@ -93,7 +92,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
   }
 
   .preview-section {
@@ -122,13 +121,13 @@
   .section {
     page-break-inside: avoid;
     margin-bottom: 15px;
-    width: 100%; /* Ensure sections take full width in print */
+    width: 100%;
   }
 
   .profile-section {
     flex-direction: column;
     align-items: flex-start;
-    width: 100%; /* Ensure profile section takes full width */
+    width: 100%;
   }
 
   .profile-image-container {

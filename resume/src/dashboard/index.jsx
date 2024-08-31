@@ -5,7 +5,7 @@ import ViewResumes from "./dashboard-components/ViewResumes";
 import Settings from "./dashboard-components/Settings";
 
 function Dashboard() {
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("create");
 
   const renderContent = () => {
     switch (activeSection) {

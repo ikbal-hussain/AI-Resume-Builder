@@ -1,7 +1,12 @@
-import React from 'react';
+import React from "react";
 import "../dash-styles/CreateResume.css"; // Ensure the path is correct
 
-function FormSection({ formData, handleChange, handleFileChange, handleSubmit }) {
+function FormSection({
+  formData,
+  handleChange,
+  handleFileChange,
+  handleSubmit,
+}) {
   return (
     <div className="form-section">
       <h3>Create a New Resume</h3>
@@ -14,13 +19,6 @@ function FormSection({ formData, handleChange, handleFileChange, handleSubmit })
             accept="image/*"
             onChange={handleFileChange}
           />
-          {/* {formData.profileImage && (
-            <img
-              src={formData.profileImage}
-              alt="Profile Preview"
-              className="profile-image-preview"
-            />
-          )} */}
         </div>
         <div className="form-group">
           <label>Name:</label>
@@ -97,7 +95,7 @@ function FormSection({ formData, handleChange, handleFileChange, handleSubmit })
             onChange={handleChange}
           />
         </div>
-        
+
         <div className="form-group">
           <label>Education:</label>
           <textarea
@@ -133,9 +131,8 @@ function FormSection({ formData, handleChange, handleFileChange, handleSubmit })
             onChange={handleChange}
           />
         </div>
-        
-       
-        <button type="submit">Create Resume</button>
+
+        {/* <button type="submit">Create Resume</button> */}
       </form>
     </div>
   );
