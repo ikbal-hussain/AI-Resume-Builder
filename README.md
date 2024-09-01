@@ -1,6 +1,6 @@
 ## ResumeFlow
 
-The Resume Builder is a web application designed to help users create professional resumes quickly and easily. This project was built to demonstrate proficiency in front-end and back-end development, featuring an intuitive user interface and powerful functionality.
+ResumeFlow is a web application designed to help users create professional resumes quickly and easily. This project was built to demonstrate proficiency in front-end and back-end development, featuring an intuitive user interface and powerful functionality.
 
 ## Project Type
 Frontend | Backend
