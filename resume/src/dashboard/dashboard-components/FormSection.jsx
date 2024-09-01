@@ -1,5 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "../dash-styles/CreateResume.css"; // Ensure the path is correct
+import axios from "axios";
+
+
+
+  async function generateSummary() {
+    console.log("loading...")
+   const response = await axios({
+      url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyARWErCJLtu2XQpVCLTi6YV0EeYwSVTXWI",
+      method: "post",
+      data: { contents: [{ parts: [{ text: "Write a generic resume summary for fresher react developer in 3-4 lines. dont ask further questions" }] }] },
+    });
+
+    
+    const res = response['data']['candidates'][0]['content']['parts'][0]['text']
+    
+    console.log(res)
+    setAiSummary(res)
+    // formData.summary = "dfgzfvsdvzsvsd"
+  }
 
 function FormSection({
   formData,
@@ -7,11 +26,17 @@ function FormSection({
   handleFileChange,
   handleSubmit,
 }) {
+
+  const [aiSummary, setAiSummary] = useState()
+
+
+
   return (
     <div className="form-section">
       <h3>Create a New Resume</h3>
+      <button onClick={generateSummary}>Generate Summary with AI</button>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
+        <div className="form-group"> 
           <label>Profile Image:</label>
           <input
             type="file"
@@ -31,16 +56,6 @@ function FormSection({
           />
         </div>
         <div className="form-group">
-          <label>Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
           <label>Phone:</label>
           <input
             type="tel"
@@ -51,6 +66,17 @@ function FormSection({
           />
         </div>
         <div className="form-group">
+          <label>Email:</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        
+        <div className="form-group">
           <label>Location:</label>
           <input
             type="text"
@@ -60,7 +86,7 @@ function FormSection({
             required
           />
         </div>
-        <div className="form-group">
+        {/* <div className="form-group">
           <label>GitHub:</label>
           <input
             type="text"
@@ -68,7 +94,7 @@ function FormSection({
             value={formData.github}
             onChange={handleChange}
           />
-        </div>
+        </div> */}
         <div className="form-group">
           <label>LinkedIn:</label>
           <input
@@ -79,10 +105,10 @@ function FormSection({
           />
         </div>
         <div className="form-group">
-          <label>Professional Summary:</label>
+          <label>Professional Summary:</label> 
           <textarea
             name="summary"
-            value={formData.summary}
+            value={formData.summary || aiSummary}
             onChange={handleChange}
           />
         </div>
