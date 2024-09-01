@@ -23,7 +23,7 @@ function Dashboard() {
   };
 
   return (
-    <div>
+    <div  className="mt-20">
       <header className="dashboard-header">ResumeFlow Dashboard</header>
       <nav className="top-navbar">
         <ul>

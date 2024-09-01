@@ -34,7 +34,7 @@ function FormSection({
   return (
     <div className="form-section">
       <h3>Create a New Resume</h3>
-      <button onClick={generateSummary}>Generate Summary with AI</button>
+      {/* <button onClick={generateSummary}>Generate Summary with AI</button> */}
       <form onSubmit={handleSubmit}>
         <div className="form-group"> 
           <label>Profile Image:</label>
