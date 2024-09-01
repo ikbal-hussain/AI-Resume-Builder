@@ -1,6 +1,9 @@
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
 
 .dashboard-header {
   background-color: #0b0761;
@@ -9,6 +12,7 @@ body {
   text-align: center;
   font-size: 24px;
 }
+
 
 .top-navbar {
   background-color: #5f48e3;
@@ -21,6 +25,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .top-navbar ul li {
@@ -38,6 +43,7 @@ body {
 .top-navbar ul li.active {
   background-color: #f26222;
 }
+
 
 .content {
   padding: 20px;
@@ -61,6 +67,7 @@ body {
   border-radius: 4px;
 }
 
+
 button {
   background-color: #333;
   color: #fff;
@@ -72,4 +79,47 @@ button {
 
 button:hover {
   background-color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-header {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .top-navbar ul li {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .top-navbar ul {
+    flex-direction: column;
+  }
+
+  .top-navbar ul li {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
 }

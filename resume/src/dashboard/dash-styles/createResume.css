@@ -1,115 +1,153 @@
-/* CreateResume.css */
 
-/* Container for the entire component */
 .create-resume-container {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; 
+}
+
+
+.form-section, 
+.preview-section {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+
+.form-section {
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+
+.preview-section {
+  background: #f4f4f4;
+}
+
+
+.preview-content {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+h4 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+h5 {
+  color: #f26222;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+p {
+  margin: 5px 0;
+  color: #444;
+  font-size: 16px;
+}
+
+
+button {
+  padding: 12px 24px;
+  background-color: #f26222;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e0521f;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  border-color: #f26222;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .create-resume-container {
+      flex-direction: column;
   }
-  
-  /* Form section styling */
-  .form-section {
-    flex: 1;
-    max-width: 50%;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(227, 7, 7, 0.1);
-    overflow-y: auto; /* Enables vertical scrolling */
-    max-height: 600px; /* Adjust this value based on your layout */
-  }
-  
-  /* Preview section styling */
+
+  .form-section, 
   .preview-section {
-    flex: 1;
-    max-width: 50%;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: #f4f4f4;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 100%;
   }
-  
-  /* Preview content styling */
-  .preview-content {
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  .form-section {
+      max-height: none; 
+      overflow-y: visible; 
   }
-  
-  /* Header styling */
-  h3 {
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
+}
+
+@media (max-width: 480px) {
   h4 {
-    color: #333;
-    margin-bottom: 10px;
-    font-size: 28px;
+      font-size: 24px;
   }
-  
+
   h5 {
-    color: #f26222;
-    margin-bottom: 10px;
-    font-size: 20px;
+      font-size: 18px;
   }
-  
+
   p {
-    margin: 5px 0;
-    color: #444;
-    font-size: 16px;
+      font-size: 14px;
   }
-  
-  /* Button styling */
+
   button {
-    padding: 12px 24px;
-    background-color: #f26222;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+      font-size: 14px;
+      padding: 10px 20px;
   }
-  
-  button:hover {
-    background-color: #e0521f;
-  }
-  
-  /* Form group styling */
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #555;
-  }
-  
+
   .form-group input, 
   .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
+      font-size: 14px;
   }
-  
-  .form-group input:focus, 
-  .form-group textarea:focus {
-    border-color: #f26222;
-    outline: none;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-group textarea {
-    resize: vertical;
-    min-height: 150px;
-  }
-  
+}

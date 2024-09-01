@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import FormSection from "./FormSection";
 import PreviewSection from "./PreviewSection";
-import "../dash-styles/CreateResume.css"; // Ensure the path is correct
+import "../dash-styles/CreateResume.css";
+import { FingerprintIcon } from "lucide-react";
 
 function CreateResume() {
   const [formData, setFormData] = useState({
@@ -19,6 +20,8 @@ function CreateResume() {
     summary: "",
     profileImage: null,
   });
+
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;

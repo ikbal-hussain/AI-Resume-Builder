@@ -1,13 +1,15 @@
+
 .preview-section {
   flex: 1;
-  max-width: 50%;
-  padding: 20px;
+  width: 650px; 
+  max-width: 100%; 
+  padding: 20px; 
   border: 1px solid #ddd;
   border-radius: 8px;
   background: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
-  max-height: 600px;
+  height: auto;
   font-family: 'Arial', sans-serif;
 }
 
@@ -15,10 +17,12 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .profile-image-container {
   margin-right: 20px;
+  flex-shrink: 0;
 }
 
 .profile-image-preview {
@@ -30,6 +34,7 @@
 }
 
 .profile-details {
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -49,6 +54,7 @@
   margin: 5px 0;
   display: flex;
   align-items: center;
+  word-wrap: break-word;
 }
 
 .contact-info i {
@@ -58,6 +64,7 @@
 
 .section {
   margin-bottom: 20px;
+  width: 100%; 
 }
 
 .section h5 {
@@ -73,4 +80,72 @@
   color: #444;
   font-size: 14px;
   margin: 5px 0;
+}
+.print-button-container{
+   display: flex;
+   justify-content: center;
+   margin: 20px;
+}
+
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .preview-section {
+    flex: none;
+    max-width: none;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border: none;
+    border-radius: 0;
+    background: #ffffff;
+    box-shadow: none;
+    overflow: visible;
+    margin: 0;
+  }
+
+  @page {
+    size: auto;
+    margin: 10mm;
+  }
+
+  .print-button-container {
+    display: none;
+  }
+
+  .section {
+    page-break-inside: avoid;
+    margin-bottom: 15px;
+    width: 100%; 
+  }
+
+  .profile-section {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .profile-image-container {
+    margin-bottom: 15px;
+  }
+
+  .contact-info p {
+    font-size: 12px;
+  }
+
+  .section h5 {
+    font-size: 18px;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+  }
+
+  .section p {
+    font-size: 12px;
+  }
 }
