@@ -30,7 +30,7 @@
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #f26222;
+  border: 2px solid #1a90f0;
 }
 
 .profile-details {
@@ -59,7 +59,7 @@
 
 .contact-info i {
   margin-right: 8px;
-  color: #f26222;
+  color: #1a90f0;
 }
 
 .section {
@@ -68,10 +68,10 @@
 }
 
 .section h5 {
-  color: #f26222;
+  color: #1a90f0;
   font-size: 20px;
   font-weight: bold;
-  border-bottom: 2px solid #f26222;
+  border-bottom: 2px solid #1a90f0;
   padding-bottom: 5px;
   margin-bottom: 10px;
 }

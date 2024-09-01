@@ -50,7 +50,7 @@ h4 {
 }
 
 h5 {
-  color: #f26222;
+  color: #1a90f0;
   margin-bottom: 10px;
   font-size: 20px;
 }
@@ -64,7 +64,7 @@ p {
 
 button {
   padding: 12px 24px;
-  background-color: #f26222;
+  background-color: #1a90f0;
   color: white;
   border: none;
   cursor: pointer;
@@ -74,7 +74,7 @@ button {
 }
 
 button:hover {
-  background-color: #e0521f;
+  background-color: #1a90f0;
 }
 
 
@@ -101,7 +101,7 @@ button:hover {
 
 .form-group input:focus, 
 .form-group textarea:focus {
-  border-color: #f26222;
+  border-color: #1a90f0;
   outline: none;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
