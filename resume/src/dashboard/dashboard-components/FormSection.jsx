@@ -2,41 +2,51 @@ import React, { useState } from "react";
 import "../dash-styles/CreateResume.css"; // Ensure the path is correct
 import axios from "axios";
 
-
-
-  async function generateSummary() {
-    console.log("loading...")
-   const response = await axios({
-      url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyARWErCJLtu2XQpVCLTi6YV0EeYwSVTXWI",
-      method: "post",
-      data: { contents: [{ parts: [{ text: "Write a generic resume summary for fresher react developer in 3-4 lines. dont ask further questions" }] }] },
-    });
-
-    
-    const res = response['data']['candidates'][0]['content']['parts'][0]['text']
-    
-    console.log(res)
-    setAiSummary(res)
-    // formData.summary = "dfgzfvsdvzsvsd"
-  }
-
 function FormSection({
   formData,
   handleChange,
   handleFileChange,
   handleSubmit,
 }) {
+  const [aiSummary, setAiSummary] = useState(formData.summary || "");
 
-  const [aiSummary, setAiSummary] = useState()
+  async function generateSummary() {
+    try {
+      console.log("Generating summary...");
+      const response = await axios({
+        url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyARWErCJLtu2XQpVCLTi6YV0EeYwSVTXWI",
+        method: "post",
+        data: {
+          contents: [
+            {
+              parts: [
+                {
+                  text: "Write a generic resume summary for fresher react developer in 3-4 lines. Don't ask further questions.",
+                },
+              ],
+            },
+          ],
+        },
+      });
 
+      const res = response.data.candidates[0].content.parts[0].text;
 
+      console.log("Summary generated:", res);
+      setAiSummary(res);
+
+      // Update formData with the generated summary
+      handleChange({ target: { name: "summary", value: res } });
+    } catch (error) {
+      console.error("Error generating summary:", error);
+    }
+  }
 
   return (
     <div className="form-section">
-      <h3>Create a New Resume</h3>
-      {/* <button onClick={generateSummary}>Generate Summary with AI</button> */}
+      {/* <h3>Create a New Resume</h3> */}
+      <button className="mb-3" onClick={generateSummary}> <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Summary with AI</button>
       <form onSubmit={handleSubmit}>
-        <div className="form-group"> 
+        <div className="form-group">
           <label>Profile Image:</label>
           <input
             type="file"
@@ -75,7 +85,6 @@ function FormSection({
             required
           />
         </div>
-        
         <div className="form-group">
           <label>Location:</label>
           <input
@@ -86,15 +95,6 @@ function FormSection({
             required
           />
         </div>
-        {/* <div className="form-group">
-          <label>GitHub:</label>
-          <input
-            type="text"
-            name="github"
-            value={formData.github}
-            onChange={handleChange}
-          />
-        </div> */}
         <div className="form-group">
           <label>LinkedIn:</label>
           <input
@@ -105,14 +105,13 @@ function FormSection({
           />
         </div>
         <div className="form-group">
-          <label>Professional Summary:</label> 
+          <label>Professional Summary:</label>
           <textarea
             name="summary"
-            value={formData.summary || aiSummary}
+            value={formData.summary}
             onChange={handleChange}
           />
         </div>
-
         <div className="form-group">
           <label>Projects:</label>
           <textarea
@@ -121,7 +120,6 @@ function FormSection({
             onChange={handleChange}
           />
         </div>
-
         <div className="form-group">
           <label>Education:</label>
           <textarea
@@ -157,9 +155,16 @@ function FormSection({
             onChange={handleChange}
           />
         </div>
-
-        {/* <button type="submit">Create Resume</button> */}
+        <button type="submit">Create Resume</button>
       </form>
+
+      {/* Preview Section */}
+      {aiSummary && (
+        <div className="preview-section mt-6">
+          <h4>Preview of Generated Summary:</h4>
+          <p>{aiSummary}</p>
+        </div>
+      )}
     </div>
   );
 }
