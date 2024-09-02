@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../dash-styles/CreateResume.css"; // Ensure the path is correct
 import axios from "axios";
+import "../dash-styles/CreateResume.css";
 
 function FormSection({
   formData,
@@ -9,42 +9,124 @@ function FormSection({
   handleSubmit,
 }) {
   const [aiSummary, setAiSummary] = useState(formData.summary || "");
+  const [showPopup, setShowPopup] = useState(false);
+  const [userInputs, setUserInputs] = useState({
+    role: '',
+    experience: '',
+    keySkills: ''
+  });
+
+  const [aiProjects, setAiProjects] = useState(formData.projects || "");
+  const [aiCertifications, setAiCertifications] = useState(formData.certifications || "");
+  const [aiEducation, setAiEducation] = useState(formData.education || "");
 
   async function generateSummary() {
     try {
       console.log("Generating summary...");
+      const prompt = `Write a plain-text resume summary for a ${userInputs.role} with ${userInputs.experience} of experience. Key skills include: ${userInputs.keySkills}. Please do not include any markdown or headings.`;
+
       const response = await axios({
         url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyARWErCJLtu2XQpVCLTi6YV0EeYwSVTXWI",
         method: "post",
-        data: {
-          contents: [
-            {
-              parts: [
-                {
-                  text: "Write a generic resume summary for fresher react developer in 3-4 lines. Don't ask further questions.",
-                },
-              ],
-            },
-          ],
-        },
+        data: 
+          { contents: [{ parts: [{ text: prompt }] }] },
+        
       });
 
-      const res = response.data.candidates[0].content.parts[0].text;
+      const res = response['data']['candidates'][0]['content']['parts'][0]['text']
 
       console.log("Summary generated:", res);
       setAiSummary(res);
 
-      // Update formData with the generated summary
       handleChange({ target: { name: "summary", value: res } });
+      setShowPopup(false);
     } catch (error) {
       console.error("Error generating summary:", error);
     }
   }
 
+  async function modifyContent(sectionName) {
+    try {
+      const content = formData[sectionName];
+      const prompt = `Correct and organize the following ${sectionName} content for a resume: ${content}. Modify if needed. Write in plain text. dont give markdown. Dont add special characters. Dont try to format text`;
+
+      const response = await axios({
+        url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyARWErCJLtu2XQpVCLTi6YV0EeYwSVTXWI",
+        method: "post",
+        data: { contents: [{ parts: [{ text: prompt }] }] },
+      });
+
+      const res = response['data']['candidates'][0]['content']['parts'][0]['text']
+
+      if (sectionName === "projects") {
+        setAiProjects(res);
+        handleChange({ target: { name: "projects", value: res } });
+      } else if (sectionName === "certifications") {
+        setAiCertifications(res);
+        handleChange({ target: { name: "certifications", value: res } });
+      } else if (sectionName === "education") {
+        setAiEducation(res);
+        handleChange({ target: { name: "education", value: res } });
+      }
+
+      console.log(`${sectionName} modified:`, res);
+    } catch (error) {
+      console.error(`Error modifying ${sectionName}:`, error);
+    }
+  }
+
+  const handlePopupChange = (e) => {
+    setUserInputs({ ...userInputs, [e.target.name]: e.target.value });
+  };
+
   return (
     <div className="form-section">
-      {/* <h3>Create a New Resume</h3> */}
-      <button className="mb-3" onClick={generateSummary}> <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Summary with AI</button>
+      {/* Trigger popup for summary generation */}
+      <button className="mb-3" onClick={() => setShowPopup(true)}>
+        <i className="fa-solid fa-wand-magic-sparkles"></i> Generate Summary with AI
+      </button>
+
+      {/* Popup Modal for User Inputs */}
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-content">
+            <h4>Enter Details for Summary Generation</h4>
+            <div className="form-group">
+              <label>Role:</label>
+              <input
+                type="text"
+                name="role"
+                value={userInputs.role}
+                onChange={handlePopupChange}
+                placeholder="e.g., React Developer"
+              />
+            </div>
+            <div className="form-group">
+              <label>Years of Experience:</label>
+              <input
+                type="text"
+                name="experience"
+                value={userInputs.experience}
+                onChange={handlePopupChange}
+                placeholder="e.g., 2 years"
+              />
+            </div>
+            <div className="form-group">
+              <label>Key Skills:</label>
+              <input
+                type="text"
+                name="keySkills"
+                value={userInputs.keySkills}
+                onChange={handlePopupChange}
+                placeholder="e.g., React, JavaScript, CSS"
+              />
+            </div>
+            <button onClick={generateSummary}>Generate Summary</button>
+            <button onClick={() => setShowPopup(false)}>Cancel</button>
+          </div>
+        </div>
+      )}
+
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Profile Image:</label>
@@ -119,6 +201,7 @@ function FormSection({
             value={formData.projects}
             onChange={handleChange}
           />
+          <button type="button" onClick={() => modifyContent('projects')}>Modify with AI</button>
         </div>
         <div className="form-group">
           <label>Education:</label>
@@ -128,6 +211,7 @@ function FormSection({
             onChange={handleChange}
             required
           />
+          <button type="button" onClick={() => modifyContent('education')}>Modify with AI</button>
         </div>
         <div className="form-group">
           <label>Experience:</label>
@@ -145,6 +229,7 @@ function FormSection({
             value={formData.skills}
             onChange={handleChange}
             required
+            placeholder="Comma Separated"
           />
         </div>
         <div className="form-group">
@@ -154,17 +239,36 @@ function FormSection({
             value={formData.certifications}
             onChange={handleChange}
           />
+          <button type="button" onClick={() => modifyContent('certifications')}>Modify with AI</button>
         </div>
         <button type="submit">Create Resume</button>
       </form>
 
-      {/* Preview Section */}
+      {/* Preview Sections
       {aiSummary && (
         <div className="preview-section mt-6">
           <h4>Preview of Generated Summary:</h4>
           <p>{aiSummary}</p>
         </div>
       )}
+      {aiProjects && (
+        <div className="preview-section mt-6">
+          <h4>Preview of Modified Projects:</h4>
+          <p>{aiProjects}</p>
+        </div>
+      )}
+      {aiCertifications && (
+        <div className="preview-section mt-6">
+          <h4>Preview of Modified Certifications:</h4>
+          <p>{aiCertifications}</p>
+        </div>
+      )}
+      {aiEducation && (
+        <div className="preview-section mt-6">
+          <h4>Preview of Modified Education:</h4>
+          <p>{aiEducation}</p>
+        </div>
+      )} */}
     </div>
   );
 }

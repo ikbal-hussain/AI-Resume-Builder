@@ -1,12 +1,50 @@
+/* settings.css */
+
 .settings-container {
-    margin: 20px;
-  }
-  
-  .setting-item {
-    margin-bottom: 20px;
-  }
-  
-  .setting-item label {
-    margin-right: 10px;
-  }
-  
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.setting-item label {
+  width: 150px;
+  font-weight: bold;
+}
+
+.setting-item select,
+.setting-item input {
+  margin-left: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.save-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}

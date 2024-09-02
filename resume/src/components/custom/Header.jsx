@@ -7,8 +7,8 @@ function Header() {
   const { user, isSignedIn } = useUser();
   return (
     <div
-      className="p-3 px-5 flex justify-between shadow-md fixed top-0 w-[100%] z-99"
-      style={{ backgroundColor: "#eff2f9" }}
+      className="p-3 px-5 flex justify-between shadow-md fixed top-0 w-[100%] z-999"
+      style={{ backgroundColor: "#eff2f9", zIndex: 999}}
     >
       <Link to="/">
         <img
