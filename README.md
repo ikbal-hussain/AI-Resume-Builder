@@ -56,6 +56,8 @@ To run this project locally:
 
 ## Acknowledgments
 
-  - Special thanks to the our mentors <a href="https://github.com/RANJAN-ritesh">Ritesh Ranjan</a>
+
+  - Special thanks to the our mentor <a href="https://github.com/RANJAN-ritesh">Ritesh Ranjan</a>
+
 for giving us direction and feedback for this project.
 
