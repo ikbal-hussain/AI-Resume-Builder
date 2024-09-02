@@ -7,6 +7,9 @@ import "../dash-styles/printStyles.css";
 function PreviewSection({ formData }) {
   const componentRef = useRef();
 
+  // Split skills into an array and trim any whitespace
+  const skillsArray = formData.skills.split(',').map(skill => skill.trim());
+
   return (
     <div>
       <div className="preview-section" ref={componentRef}>
@@ -53,7 +56,13 @@ function PreviewSection({ formData }) {
 
           <div className="section">
             <h5>SKILLS</h5>
-            <p>{formData.skills}</p>
+            <div className="skills-container">
+              {skillsArray.map((skill, index) => (
+                <span key={index} className="skill-item">
+                  {skill}
+                </span>
+              ))}
+            </div>
           </div>
 
           <div className="section">

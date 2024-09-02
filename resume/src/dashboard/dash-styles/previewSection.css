@@ -149,3 +149,24 @@
     font-size: 12px;
   }
 }
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adjust the spacing between skills */
+}
+
+.skill-item {
+  background-color: #2887eb45; /* Primary color for the skill button */
+  color: black;
+  padding: 5px 7px;
+  border-radius: 3px;
+  font-size: 14px;
+  text-align: center;
+  cursor: default; /* Prevent the cursor from changing to text selection */
+  /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); */
+}
+
+/* .skill-item:hover {
+  background-color: #0056b3; 
+} */

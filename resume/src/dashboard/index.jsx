@@ -9,8 +9,8 @@ function Dashboard() {
 
   const renderContent = () => {
     switch (activeSection) {
-      case "home":
-        return <div>Welcome to the ResumeFlow Dashboard</div>;
+      // case "home":
+      //   return <div>Welcome to the ResumeFlow Dashboard</div>;
       case "create":
         return <CreateResume />;
       case "view":
@@ -27,12 +27,12 @@ function Dashboard() {
       <header className="dashboard-header">ResumeFlow Dashboard</header>
       <nav className="top-navbar">
         <ul>
-          <li
+          {/* <li
             className={activeSection === "home" ? "active" : ""}
             onClick={() => setActiveSection("home")}
           >
             <i className="fas fa-home"></i> Home
-          </li>
+          </li> */}
           <li
             className={activeSection === "create" ? "active" : ""}
             onClick={() => setActiveSection("create")}
