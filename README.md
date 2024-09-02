@@ -46,7 +46,7 @@ To run this project locally:
      
   - <a href="https://github.com/ikbal-hussain">Ikbal Hussain</a>
   - <a href="https://github.com/Dhananjay155">Dhananjay </a>
-  - <a href="https://github.com/imarani494">Imran Ali</a>
+  - <a href="https://github.com/imarani494">Imaran</a>
   - <a href="https://github.com/Shouvick21">Shouvick</a>
 
   
