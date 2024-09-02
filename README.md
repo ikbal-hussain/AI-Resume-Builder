@@ -12,7 +12,7 @@ Frontend | Backend
 
 
 ## Video Walkthrough of the project
-<a href="https://youtu.be/ZKKcBcCgdS8">Project
+<a href="https://www.youtube.com/watch?v=zlGNCgGlm58">Project
 presentation video</a>
 
 ## Features
