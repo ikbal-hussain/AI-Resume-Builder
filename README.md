@@ -1,6 +1,6 @@
 ## ResumeFlow
 
-ResumeFlow is a web application designed to help users create professional resumes quickly and easily. This project was built to demonstrate proficiency in front-end and back-end development, featuring an intuitive user interface and powerful functionality.
+ResumeFlow is an online AI-powered resume builder that allows users to quickly and easily create and download professional resumes. It caters to job seekers by offering real-time content suggestions. The platform simplifies the resume creation process, ensuring a polished final product.
 
 ## Project Type
 Frontend | Backend
