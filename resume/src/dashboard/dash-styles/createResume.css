@@ -1,191 +1,175 @@
-
 .create-resume-container {
   display: flex;
   flex-direction: row;
   gap: 20px;
   padding: 20px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
-
-.form-section, 
 .preview-section {
   flex: 1;
-  padding: 20px;
+  width: 650px; 
+  max-width: 100%; 
+  padding: 25px; 
   border: 1px solid #ddd;
   border-radius: 8px;
+  background: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 100%;
-}
-
-
-.form-section {
-  max-height: 800px;
   overflow-y: auto;
+  height: auto;
+  font-family: 'Arial', sans-serif;
 }
 
-
-.preview-section {
-  background: #f4f4f4;
-}
-
-
-.preview-content {
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-
-h3 {
-  color: #333;
-  margin-bottom: 15px;
-}
-
-h4 {
-  color: #333;
-  margin-bottom: 10px;
-  font-size: 28px;
-}
-
-h5 {
-  color: #1a90f0;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-p {
-  margin: 5px 0;
-  color: #444;
-  font-size: 16px;
-}
-
-
-button {
-  padding: 12px 24px;
-  background-color: #1a90f0;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #1a90f0;
-}
-
-
-.form-group {
+.profile-section {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
+.profile-image-container {
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.profile-image-preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #1a90f0;
+}
+
+.profile-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  color: #333;
+  font-size: 28px;
   font-weight: bold;
-  color: #555;
+  margin-bottom: 10px;
 }
 
-.form-group input, 
-.form-group textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 16px;
+.contact-info {
+  font-size: 14px;
 }
 
-.form-group input:focus, 
-.form-group textarea:focus {
-  border-color: #1a90f0;
-  outline: none;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+.contact-info p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  word-wrap: break-word;
 }
 
-.form-group textarea {
-  resize: vertical;
-  min-height: 150px;
+.contact-info i {
+  margin-right: 8px;
+  color: #1a90f0;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .create-resume-container {
-      flex-direction: column;
-  }
-
-  .form-section, 
-  .preview-section {
-      max-width: 100%;
-  }
-
-  .form-section {
-      max-height: none; 
-      overflow-y: visible; 
-  }
+.section {
+  margin-bottom: 20px;
+  width: 100%; 
 }
 
-@media (max-width: 480px) {
-  h4 {
-      font-size: 24px;
-  }
-
-  h5 {
-      font-size: 18px;
-  }
-
-  p {
-      font-size: 14px;
-  }
-
-  button {
-      font-size: 14px;
-      padding: 10px 20px;
-  }
-
-  .form-group input, 
-  .form-group textarea {
-      font-size: 14px;
-  }
+.section h5 {
+  color: #1a90f0;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid #1a90f0;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
-/* Popup styles */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+.section p {
+  color: #444;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.print-button-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 45px;
-}
-.popup-overlay input {
-   padding: 10px;
+  margin: 20px;
 }
 
-.popup-content {
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  max-width: 500px;
-  width: 100%;
+/* Print Styles */
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .preview-section {
+    flex: none;
+    max-width: none;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border: none;
+    border-radius: 0;
+    background: #ffffff;
+    box-shadow: none;
+    overflow: visible;
+    margin: 0;
+  }
+
+  @page {
+    size: auto;
+    margin: 10mm;
+  }
+
+  .print-button-container {
+    display: none;
+  }
+
+  .section {
+    page-break-inside: avoid;
+    margin-bottom: 15px;
+    width: 100%; 
+  }
+
+  .profile-section {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .profile-image-container {
+    margin-bottom: 15px;
+  }
+
+  .contact-info p {
+    font-size: 12px;
+  }
+
+  .section h5 {
+    font-size: 18px;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+  }
+
+  .section p {
+    font-size: 12px;
+  }
 }
 
-.popup-content h4 {
-  margin-bottom: 7px;
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.popup-content .form-group {
-  margin-bottom: 15px;
+.skill-item {
+  background-color: #2887eb45;
+  color: black;
+  padding: 5px 7px;
+  border-radius: 3px;
+  font-size: 14px;
+  text-align: center;
+  cursor: default;
 }
-
-.popup-content button {
-  margin-right: 10px;
-}
-

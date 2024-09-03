@@ -2,11 +2,13 @@
   body {
     margin: 0;
     padding: 0;
+    font-family: 'Arial', sans-serif;
   }
 
   .preview-section {
+    flex: none;
+    max-width: none;
     width: 100%;
-    max-width: 100%;
     height: auto;
     padding: 20px;
     border: none;
@@ -14,18 +16,59 @@
     background: #ffffff;
     box-shadow: none;
     overflow: visible;
-    margin: 0 auto;
+    margin: 0;
   }
 
   @page {
-    margin: 10mm; 
+    size: auto;
+    margin: 10mm;
   }
 
   .print-button-container {
     display: none;
   }
 
-  .no-print {
-    display: none;
+  .section {
+    page-break-inside: avoid;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .profile-section {
+    display: flex;
+    flex-direction: row; /* Ensure the direction is row */
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px; /* Add some margin at the bottom */
+  }
+
+  .profile-image-container {
+    margin-right: 20px;
+    flex-shrink: 0;
+    margin-top: 19px;
+  }
+
+  .profile-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+  }
+
+  .contact-info p {
+    font-size: 12px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .section h5 {
+    font-size: 18px;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+  }
+
+  .section p {
+    font-size: 12px;
   }
 }

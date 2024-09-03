@@ -1,0 +1,110 @@
+.form-section {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    max-height: 800px;
+    overflow-y: auto;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .form-group input, 
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  .form-group input:focus, 
+  .form-group textarea:focus {
+    border-color: #1a90f0;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .create-resume-container {
+      flex-direction: column;
+    }
+  
+    .form-section {
+      max-width: 100%;
+      max-height: none; 
+      overflow-y: visible; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .form-group input, 
+    .form-group textarea {
+      font-size: 14px;
+    }
+  }
+  
+  /* Popup styles */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+  }
+  
+  .popup-overlay input {
+    padding: 10px;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .popup-content h4 {
+    margin-bottom: 7px;
+  }
+  
+  .popup-content .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .popup-content button {
+    margin-right: 10px;
+  }
+
+  button{
+    background-color: #188ce9;
+    margin: 5px;
+  }
+  button:hover{
+    background-color: #0967b4;
+  }
+  
