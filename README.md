@@ -6,13 +6,14 @@ ResumeFlow is a web application designed to help users create professional resum
 Frontend | Backend
 
 ## Project Images
-![image](https://github.com/ikbal-hussain/Function-Fencers-034/blob/develop/resume/src/assets/ResumeFlow%20screenshot.png)
+![image](https://github.com/ikbal-hussain/Function-Fencers-034/blob/main/resume/src/assets/resumeFlow_home_page.png)
+![image](https://github.com/ikbal-hussain/Function-Fencers-034/blob/main/resume/src/assets/resumeFlow_dashboard.png)
 ## Deployed Link
 <h3><a href="https://resumeflow.netlify.app/">Live Demo : ResumeFlow</a></h3>
 
 
 ## Video Walkthrough of the project
-<a href="https://youtu.be/ZKKcBcCgdS8">Project
+<a href="https://www.youtube.com/watch?v=zlGNCgGlm58">Project
 presentation video</a>
 
 ## Features
@@ -46,7 +47,7 @@ To run this project locally:
      
   - <a href="https://github.com/ikbal-hussain">Ikbal Hussain</a>
   - <a href="https://github.com/Dhananjay155">Dhananjay </a>
-  - <a href="https://github.com/imarani494">Imran Ali</a>
+  - <a href="https://github.com/imarani494">Imaran</a>
   - <a href="https://github.com/Shouvick21">Shouvick</a>
 
   

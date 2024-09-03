@@ -12,16 +12,14 @@ function CreateResume() {
     location: "",
     github: "",
     linkedin: "",
-    education: "",
-    experience: "",
+    education: [],  // Initialize as an array
+    experience: [], // Initialize as an array
     skills: "",
-    certifications: "",
-    projects: "",
+    certifications: [], // Initialize as an array
+    projects: [], // Initialize as an array
     summary: "",
     profileImage: null,
   });
-
-  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -43,18 +41,16 @@ function CreateResume() {
     e.preventDefault();
     console.log("Resume Data:", formData);
     alert("Resume Created Successfully!");
-  
+
     // Retrieve existing resumes from localStorage
     const existingResumes = JSON.parse(localStorage.getItem("resumesData")) || [];
-  
+
     // Add the new resume to the array
     existingResumes.push(formData);
-  
+
     // Save the updated array back to localStorage
     localStorage.setItem("resumesData", JSON.stringify(existingResumes));
-    
   };
-  
 
   return (
     <div className="create-resume-container">
