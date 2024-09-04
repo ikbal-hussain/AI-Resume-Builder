@@ -1,6 +1,6 @@
 ## ResumeFlow
 
-ResumeFlow is an online AI-powered resume builder that allows users to quickly and easily create and download professional resumes. It caters to job seekers by offering real-time content suggestions. The platform simplifies the resume creation process, ensuring a polished final product.
+ResumeFlow is an online AI-powered resume builder that allows users to quickly and easily create and download professional resumes. It caters to job seekers by offering real-time content suggestions. The platform simplifies the resume creation process, ensuring a polished final product
 
 ## Project Type
 Frontend | Backend
