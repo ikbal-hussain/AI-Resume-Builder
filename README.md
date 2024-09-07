@@ -22,7 +22,7 @@ presentation video</a>
 - Education: List degrees, institutions, and graduation dates.
 - Skills:Create a list of technical and soft skills.
 - PDF Export: Export the resume as a PDF.
-- Responsive Design: Ensure the resume looks good on all devices.
+- Responsive Design: It is ensured that the resume looks good on all devices.
 
 
 
