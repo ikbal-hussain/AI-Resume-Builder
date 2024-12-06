@@ -23,6 +23,7 @@ presentation video</a>
 - Skills:Create a list of technical and soft skills.
 - PDF Export: Export the resume as a PDF.
 - Responsive Design: It is ensured that the resume looks good on all devices.
+- AI Summary Generation: Generate customised summary with the help of AI. 
 
 
 
