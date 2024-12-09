@@ -10,6 +10,7 @@ Frontend | Backend
 ![image](https://github.com/ikbal-hussain/Function-Fencers-034/blob/main/src/assets/resumeFlow_dashboard.png)
 ## Deployed Link
 <h3><a href="https://resumeflow.netlify.app/">Live Demo : ResumeFlow</a></h3>
+<h3><a href="https://resumeflow-new.netlify.app/">New Deployed Link with new API keys</a></h3>
 
 
 ## Video Walkthrough of the project
