@@ -17,7 +17,8 @@ function FormSection({
     keySkills: ''
   });
 
-  // Handling multiple entries as arrays
+  const VITE_GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+
   const [aiProjects, setAiProjects] = useState(formData.projects || []);
   const [aiCertifications, setAiCertifications] = useState(formData.certifications || []);
   const [aiEducation, setAiEducation] = useState(formData.education || []);
@@ -29,7 +30,7 @@ function FormSection({
       const prompt = `Write a plain-text resume 4-5 line summary for a ${userInputs.role} with ${userInputs.experience} of experience. Key skills include: ${userInputs.keySkills}. Please do not include any markdown or headings.`;
 
       const response = await axios({
-        url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyARWErCJLtu2XQpVCLTi6YV0EeYwSVTXWI",
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${VITE_GEMINI_API_KEY}`,
         method: "post",
         data: 
           { contents: [{ parts: [{ text: prompt }] }] },
@@ -104,7 +105,7 @@ function FormSection({
 
   return (
     <div className="form-section">
-      {/* Trigger popup for summary generation */}
+      {/* Triggering popup for summary generation */}
       <button className="mb-3" onClick={() => setShowPopup(true)}>
         <i className="fa-solid fa-wand-magic-sparkles"></i> Generate Summary with AI
       </button>
