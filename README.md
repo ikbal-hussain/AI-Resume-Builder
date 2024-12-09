@@ -6,8 +6,8 @@ ResumeFlow is an online AI-powered resume builder that allows users to quickly a
 Frontend | Backend
 
 ## Project Images
-![image](https://github.com/ikbal-hussain/Function-Fencers-034/blob/main/resume/src/assets/resumeFlow_home_page.png)
-![image](https://github.com/ikbal-hussain/Function-Fencers-034/blob/main/resume/src/assets/resumeFlow_dashboard.png)
+![image](https://github.com/ikbal-hussain/Function-Fencers-034/blob/main/src/assets/resumeFlow_home_page.png)
+![image](https://github.com/ikbal-hussain/Function-Fencers-034/blob/main/src/assets/resumeFlow_dashboard.png)
 ## Deployed Link
 <h3><a href="https://resumeflow.netlify.app/">Live Demo : ResumeFlow</a></h3>
 
