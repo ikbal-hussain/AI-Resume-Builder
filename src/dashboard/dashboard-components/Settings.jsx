@@ -21,7 +21,7 @@ function Settings() {
 
   return (
     <div className="settings-container">
-      <h1>Settings</h1>
+      <h1>Resumeflow Settings</h1>
       
       <div className="setting-item">
         <label htmlFor="theme-select">Select Theme:</label>

@@ -55,7 +55,7 @@ function FormSection({
       const prompt = `Correct and organize the following ${sectionName} content for a resume: ${content}. Modify if needed. Write in plain text. dont give markdown. Dont add special characters. Dont try to format text. give in a single paragraph. word limit= 65. always add "-" before (without quotes)`;
 
       const response = await axios({
-        url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyARWErCJLtu2XQpVCLTi6YV0EeYwSVTXWI",
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${VITE_GEMINI_API_KEY}`,
         method: "post",
         data: { contents: [{ parts: [{ text: prompt }] }] },
       });
