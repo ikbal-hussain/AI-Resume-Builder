@@ -15,13 +15,13 @@ export const Faq=()=>{
     <h2>
       <AccordionButton style={{backgroundColor:"white",color:"black",border:"1px solid",}}>
         <Box as='span' flex='1' textAlign='left'>
-        How can I use Resume Flow for free?
+        How can I use Resume94 for free?
         </Box>
         <AccordionIcon />
       </AccordionButton>
     </h2>
     <AccordionPanel pb={4} style={{padding:"10px"}}>
-    Resume Flow has a few different tools you can use 100% for free without entering any credit card details. 
+    Resume94 has a few different tools you can use 100% for free without entering any credit card details. 
       
     </AccordionPanel>
   </AccordionItem >

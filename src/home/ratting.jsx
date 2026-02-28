@@ -79,7 +79,7 @@ export const Rating_carosal = () => {
     {
       greenstar: [1, 2, 3, 4, 5],
 
-      heading: "Resume Flow is a great way to structure a…",
+      heading: "Resume94 is a great way to structure a…",
       text: "Resume.io is a great way to structure a resume without worrying about how it looks in advance. Simply keep your details up to do date and when you're done, you can choose from a number of professional looking templates.",
       date: "Leah • about 18 hours ago",
     },
